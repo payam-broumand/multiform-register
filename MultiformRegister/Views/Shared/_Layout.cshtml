@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html dir="rtl">
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	<link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" /> 
+
+	<style>
+		.field-validation-error{
+			color: #ff0000;
+
+		}
+
+		.input-validation-error{
+			box-shadow: 0 0 14px -5px #ff0000 !important;
+			border-color: #ff0000 !important;
+		}
+		.card-body{
+			min-height: 300px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.card-body a{
+			margin: auto;
+		}
+		.card-body form {
+			width: 100%;
+		}
+		.button-line{
+			display: flex;
+			flex-direction: row; 
+			margin-top: 20px; 
+		}
+		.single-btn-line{
+			flex-direction: row-reverse;
+		} 
+		.button-line a:first-of-type {
+			float: right;
+			margin-right: 0;
+		}
+		.button-line a:last-of-type {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<section class="container">
+		@RenderBody()
+	</section>
+
+	<script src="~/lib/jquery/jquery.min.js"></script>
+	<script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

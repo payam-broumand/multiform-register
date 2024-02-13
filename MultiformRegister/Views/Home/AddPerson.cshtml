@@ -1,0 +1,30 @@
+﻿@model Person
+@{
+
+}
+<section class="card w-100 mt-4">
+	<div class="card-body">
+		<h4 class="card-title mb-5 mt-2">ورود مشخصات کاربری</h4>
+		<form method="post" asp-controller="Home" asp-action="AddPerson">
+			<div asp-validation-summary="All" class="text-danger"></div>
+			<div class="mt-2">
+				<label asp-for="FirstName" for="fname"></label>
+				<input asp-for="FirstName" id="fname" class="form-control" />
+				<span asp-validation-for="FirstName"></span>
+			</div>
+			<div class="mt-2">
+				<label asp-for="LastName" for="fname"></label>
+				<input asp-for="LastName" id="fname" class="form-control" />
+				<span asp-validation-for="LastName"></span>
+			</div>
+			<div class="mt-2">
+				<label asp-for="PhoneNumber" for="fname"></label>
+				<input asp-for="PhoneNumber" id="fname" class="form-control" />
+				<span asp-validation-for="PhoneNumber"></span>
+			</div>
+			<div class="button-line single-btn-line">
+				<button class="btn btn-info" type="submit">رفتن به مرحله بعدی</button>
+			</div>
+		</form>
+	</div>
+</section>

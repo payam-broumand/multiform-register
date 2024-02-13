@@ -1,0 +1,33 @@
+﻿@model Education
+@{
+
+}
+<section class="card w-100 mt-4">
+	<div class="card-body">
+		<h4 class="card-title mb-5 mt-2">ورود مشخصات تحصیلی</h4>
+		<form method="post" asp-controller="Home" asp-action="AddEducate">
+			<div asp-validation-summary="All" class="text-danger"></div>
+			<div class="mt-2">
+				<label asp-for="UniversityName" for="fname"></label>
+				<input asp-for="UniversityName" id="fname" class="form-control" />
+				<span asp-validation-for="UniversityName"></span>
+			</div>
+			<div class="mt-2">
+				<label asp-for="DegreeId" for="fname"></label> 
+				<select asp-for="DegreeId" asp-items="@Html.GetEnumSelectList<Degree>()" class="form-control">
+					<option value="-1">انتخاب مقطع تحصیلی</option>
+				</select>
+				<span asp-validation-for="DegreeId"></span>
+			</div>
+			<div class="mt-2">
+				<label asp-for="Average" for="fname"></label>
+				<input asp-for="Average" id="fname" class="form-control" />
+				<span asp-validation-for="Average"></span>
+			</div>
+			<div class="button-line double-btn-line">
+				<a class="btn btn-warning" asp-action="AddPerson">رفتن به مرحله قبلی</a>
+				<button class="btn btn-info" type="submit">رفتن به مرحله بعدی</button>
+			</div>
+		</form>
+	</div>
+</section>
